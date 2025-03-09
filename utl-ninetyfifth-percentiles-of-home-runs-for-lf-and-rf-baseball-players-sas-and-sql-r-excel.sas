@@ -68,7 +68,7 @@ https://communities.sas.com/t5/SAS-Programming/Output-all-values-greater-than-90
 /*  informat pos $2.        |    ,host = "localhost"                 | ====                                                 */
 /*    HOMERS 2.;            |    ,port = 5432                        | Method Variances  DF t Value  Pr < t                 */
 /*  input POS HOMERS @@;    |    ,user = "postgres"                  |                                                      */
-/*  CARDS4;                 |    ,password = "Sas2@rlx")             | Pooled Equal      49   -2.82  0.0035                 */
+/*  CARDS4;                 |    ,password = "12345678")             | Pooled Equal      49   -2.82  0.0035                 */
 /*  RF 20 LF 10             | dbWriteTable(con                       |                                                      */
 /*  RF 13 LF 04             |     ,"havsql"                          | EQUALITY OF VARIANCES                                */
 /*  LF 20 LF 06             |     ,have                              | =====================                                */
@@ -304,7 +304,7 @@ con <- dbConnect(
    ,host = "localhost"
    ,port = 5432
    ,user = "postgres"
-   ,password = "Sas2@rlx")
+   ,password = "12345678")
 dbWriteTable(con
     ,"havsql"
     ,have
@@ -371,7 +371,7 @@ run;quit;
 +    ,host = "localhost"
 +    ,port = 5432
 +    ,user = "postgres"
-+    ,password = "Sas2@rlx")
++    ,password = "12345678")
 > dbWriteTable(con
 +     ,"havsql"
 +     ,have
